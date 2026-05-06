@@ -1,3 +1,8 @@
 <Solution>
-  <Project Path="OllamaIntegration.Api/OllamaIntegration.Api.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/OllamaIntegration.Api/OllamaIntegration.Api.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
 </Solution>

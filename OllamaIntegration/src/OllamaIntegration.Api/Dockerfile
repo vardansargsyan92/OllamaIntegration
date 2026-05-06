@@ -12,10 +12,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["OllamaIntegration.Api/OllamaIntegration.Api.csproj", "OllamaIntegration.Api/"]
-RUN dotnet restore "./OllamaIntegration.Api/OllamaIntegration.Api.csproj"
+COPY ["src/OllamaIntegration.Api/OllamaIntegration.Api.csproj", "src/OllamaIntegration.Api/"]
+RUN dotnet restore "./src/OllamaIntegration.Api/OllamaIntegration.Api.csproj"
 COPY . .
-WORKDIR "/src/OllamaIntegration.Api"
+WORKDIR "/src/src/OllamaIntegration.Api"
 RUN dotnet build "./OllamaIntegration.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage

@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projects\\OllamaIntegration\\OllamaIntegration\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E21ABE-D19D-4B13-8B73-5C826321227D}|OllamaIntegration.Api\\OllamaIntegration.Api.csproj|c:\\projects\\ollamaintegration\\ollamaintegration\\ollamaintegration.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A9E21ABE-D19D-4B13-8B73-5C826321227D}|OllamaIntegration.Api\\OllamaIntegration.Api.csproj|solutionrelative:ollamaintegration.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E21ABE-D19D-4B13-8B73-5C826321227D}|OllamaIntegration.Api\\OllamaIntegration.Api.csproj|c:\\projects\\ollamaintegration\\ollamaintegration\\ollamaintegration.api\\ollamaintegration.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{A9E21ABE-D19D-4B13-8B73-5C826321227D}|OllamaIntegration.Api\\OllamaIntegration.Api.csproj|solutionrelative:ollamaintegration.api\\ollamaintegration.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9E21ABE-D19D-4B13-8B73-5C826321227D}|OllamaIntegration.Api\\OllamaIntegration.Api.csproj|c:\\projects\\ollamaintegration\\ollamaintegration\\ollamaintegration.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9E21ABE-D19D-4B13-8B73-5C826321227D}|OllamaIntegration.Api\\OllamaIntegration.Api.csproj|solutionrelative:ollamaintegration.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Projects\\OllamaIntegration\\OllamaIntegration\\OllamaIntegration.Api\\Dockerfile",
-              "RelativeDocumentMoniker": "OllamaIntegration.Api\\Dockerfile",
-              "ToolTip": "C:\\Projects\\OllamaIntegration\\OllamaIntegration\\OllamaIntegration.Api\\Dockerfile",
-              "RelativeToolTip": "OllamaIntegration.Api\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-06T09:35:19.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OllamaIntegration.Api.http",
-              "DocumentMoniker": "C:\\Projects\\OllamaIntegration\\OllamaIntegration\\OllamaIntegration.Api\\OllamaIntegration.Api.http",
-              "RelativeDocumentMoniker": "OllamaIntegration.Api\\OllamaIntegration.Api.http",
-              "ToolTip": "C:\\Projects\\OllamaIntegration\\OllamaIntegration\\OllamaIntegration.Api\\OllamaIntegration.Api.http",
-              "RelativeToolTip": "OllamaIntegration.Api\\OllamaIntegration.Api.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-05-06T09:35:12.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projects\\OllamaIntegration\\OllamaIntegration\\OllamaIntegration.Api\\Program.cs",
-              "RelativeDocumentMoniker": "OllamaIntegration.Api\\Program.cs",
-              "ToolTip": "C:\\Projects\\OllamaIntegration\\OllamaIntegration\\OllamaIntegration.Api\\Program.cs",
-              "RelativeToolTip": "OllamaIntegration.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T09:35:11.117Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
