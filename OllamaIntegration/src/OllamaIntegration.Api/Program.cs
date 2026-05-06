@@ -1,43 +1,45 @@
+using System.Text.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHttpClient("ollama", client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["Ollama:BaseUrl"]!);
+    client.Timeout = TimeSpan.FromMinutes(5);
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-
-var summaries = new[]
+app.MapPost("/api/chat", async (ChatRequest request, IHttpClientFactory clientFactory) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    var client = clientFactory.CreateClient("ollama");
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    var ollamaRequest = new
+    {
+        model = "llama3.2:3b",
+        stream = false,
+        messages = request.Messages
+    };
+
+    var response = await client.PostAsJsonAsync("/api/chat", ollamaRequest);
+    response.EnsureSuccessStatusCode();
+
+    var result = await response.Content.ReadFromJsonAsync<JsonElement>();
+    return Results.Ok(result);
 })
-.WithName("GetWeatherForecast")
+.WithName("Chat")
 .WithOpenApi();
 
 app.Run();
 
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+record ChatMessage(string Role, string Content);
+record ChatRequest(List<ChatMessage> Messages);
